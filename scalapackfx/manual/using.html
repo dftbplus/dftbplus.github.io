@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Using SCALAPACKFX &mdash; SCALAPACKFX</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '12.12',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="SCALAPACKFX" href="index.html" />
+    <link rel="next" title="List of routines" href="routines.html" />
+    <link rel="prev" title="Compiling and installing SCALAPACKFX" href="installing.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="routines.html" title="List of routines"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="installing.html" title="Compiling and installing SCALAPACKFX"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SCALAPACKFX</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="installing.html"
+                        title="previous chapter">Compiling and installing SCALAPACKFX</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="routines.html"
+                        title="next chapter">List of routines</a></p>
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About SCALAPACKFX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Compiling and installing SCALAPACKFX</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Using SCALAPACKFX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routines.html">List of routines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="using-scalapackfx">
+<h1>Using SCALAPACKFX<a class="headerlink" href="#using-scalapackfx" title="Permalink to this headline">¶</a></h1>
+<p>Before you can use the SCALAPACKFX routines, you need basically the following
+two steps.</p>
+<ol class="arabic simple">
+<li>Import the module <cite>libscalapackfx_module</cite> in your routines.</li>
+<li>Initialize a grid for the BLACS-communcation using <cite>type(blacsgrid)</cite>.</li>
+</ol>
+<p>Below you find an example draft for reading in a matrix from a file,
+distributing it across the processes and finally diagonalizing it:</p>
+<div class="highlight-python"><div class="highlight"><pre>program test_diag
+  use libscalapackfx_module
+
+  integer, parameter :: nprow = 4, npcol = 4   ! process rows/cols
+  integer, parameter :: bsize = 64             ! block size
+  integer, parameter :: nn = 1000              ! matrix size
+
+  type(blacsgrid) :: mygrid  ! BLACS grid descriptor
+  real(dp), allocatable :: aa(:,:), bb(:,:), eigvecs(:,:), eigvals(:)
+  integer :: desc(DLEN_)    ! matrix descriptor
+  integer :: mloc, nloc     ! nr. of local rows/columns of the matrices
+  type(linecomm) :: distr               ! distributes matrix when read
+  real(dp), allocatable :: iobuffer(:)  ! buffer during read
+
+  ! Initialize your BLACS grid
+  call mygrid%gridinit(nprow, npcol)
+
+  ! Allocate the local part of the distributed matrices
+  call scalafx_getdescriptor(mygrid, nn, nn, bsize, bsize, desc)
+  call scalafx_getlocalshape(mygrid, desc, mloc, nloc)
+  allocate(aa(mloc, nloc))
+  allocate(bb(mloc, nloc))
+  allocate(eigvecs(mloc, nloc))
+  allocate(eigvals(nn))
+  ...
+  ! Here comes the code which distributes your matrix
+  ! You can use the linecomm type to distribute it if you read it from file
+  if (master) then
+      allocate(iobuffer(nn))
+  end if
+  call distr%init(desc, &quot;c&quot;)
+  do icol = 1, nn
+    if (myblacs%master) then
+      read(12, *) iobuffer(:)
+      call distr%setline_master(myblacs, icol, iobuffer, aa)
+    else
+      call distr%setline_slave(myblacs, icol, mtxloc)
+    end if
+  end do
+  ...
+  ! Get eigenvalues (on all nodes) and eigenvectors (distributed)
+  call psygvd(aa, desc, bb, desc, eigvals, eigvecs, desc, jobz=&quot;V&quot;, uplo=&quot;L&quot;)
+  ...
+end program test_diag
+</pre></div>
+</div>
+<p>Have a look at the test folder in the source tree for further examples.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="routines.html" title="List of routines"
+             >next</a></li>
+        <li class="right" >
+          <a href="installing.html" title="Compiling and installing SCALAPACKFX"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">SCALAPACKFX</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

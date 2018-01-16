@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About MPIFX &mdash; MPIFX</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '12.12',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="#" />
+    <link rel="top" title="MPIFX" href="index.html" />
+    <link rel="next" title="Compiling and installing MPIFX" href="installing.html" />
+    <link rel="prev" title="Welcome to MPIFX’s documentation!" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="installing.html" title="Compiling and installing MPIFX"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to MPIFX’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MPIFX</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to MPIFX&#8217;s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="installing.html"
+                        title="next chapter">Compiling and installing MPIFX</a></p>
+<h3><a href="index.html">Table Of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">About MPIFX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Compiling and installing MPIFX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using.html">Using MPIFX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="routines.html">List of routines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="about-mpifx">
+<h1>About MPIFX<a class="headerlink" href="#about-mpifx" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/dftbplus/mpifx/">MPIFX</a> is a library containing modern
+Fortran (Fortran 2003) wrappers around MPI routines. The goal is to make the use
+of MPI as simple as possible in Fortran.</p>
+<p>Consider for example a simple MPI broadcast. In order to broadcast an integer
+array with 25 elements using the legacy MPI routine, you have to issue:</p>
+<div class="highlight-python"><div class="highlight"><pre>call mpi_bcast(myarray, 25, MPI_INTEGER, 0, MPI_COMM_WORLD, error)
+</pre></div>
+</div>
+<p>Additional to the object to be broadcasted and the communicator, you also
+<em>must</em> specify following arguments:</p>
+<ul class="simple">
+<li>type of the array (which is redundant, as it is <em>known</em> at compile-time)</li>
+<li>size of the array (which is redundant, as it is <em>known</em> at run-time)</li>
+<li>root node of the broadcast (setting it to the master node as default would
+be a definitely safe choice)</li>
+<li>error flag (one could per default just omit it and rely on the program to stop
+if a problem arised, similar as done in Fortran for allocations)</li>
+</ul>
+<p>Using MPIFX the call above is as simple as:</p>
+<div class="highlight-python"><div class="highlight"><pre>call mpifx_bcast(comm, myarray)
+</pre></div>
+</div>
+<p>No redundant arguments, sensible defaults. Nevertheless the full functionality
+still available via optional parameters if needed. E.g. if you wanted to handle
+the error flag yourself (making sure an error won&#8217;t stop your code), you could
+call:</p>
+<div class="highlight-python"><div class="highlight"><pre>call mpifx_bcast(comm, myarray, error=ierr)
+</pre></div>
+</div>
+<p>A few essential communication routines are already covered (see
+<a class="reference internal" href="routines.html#sec-routines"><span>List of routines</span></a>). If your desired MPI-routine is not among them yet, you are
+cordially invited to extend MPIFX and to share it in order to let others profit
+from your work (MPIFX is licensed under the simplified BSD license). For more
+details see the <a class="reference external" href="https://github.com/dftbplus/mpifx/">project page</a>.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="installing.html" title="Compiling and installing MPIFX"
+             >next</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to MPIFX’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">MPIFX</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>
