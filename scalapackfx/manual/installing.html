@@ -1,34 +1,32 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>Compiling and installing SCALAPACKFX &mdash; SCALAPACKFX</title>
-    
+    <title>Compiling and installing SCALAPACKFX &#8212; SCALAPACKFX</title>
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
         VERSION:     '12.12',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
-    <link rel="top" title="SCALAPACKFX" href="index.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Using SCALAPACKFX" href="using.html" />
     <link rel="prev" title="About SCALAPACKFX" href="about.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -38,7 +36,7 @@
         <li class="right" >
           <a href="about.html" title="About SCALAPACKFX"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">SCALAPACKFX</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">SCALAPACKFX</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -52,7 +50,7 @@
 <h3><a href="index.html">Table Of Contents</a></h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About SCALAPACKFX</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Compiling and installing SCALAPACKFX</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Compiling and installing SCALAPACKFX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using.html">Using SCALAPACKFX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="routines.html">List of routines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
@@ -96,14 +94,14 @@ can recognize them.</li>
 <p>During the build process of your project, you may link the library with the
 <cite>-lscalapackfx</cite> option.  Eventually, you may need to specify options for your
 compiler and your linker to specify the location of those directories. Assuming
-you&#8217;ve put the module files in the directory <cite>&lt;MODFILEDIR&gt;</cite> and the library file
+you’ve put the module files in the directory <cite>&lt;MODFILEDIR&gt;</cite> and the library file
 in <cite>&lt;LIBRARYDIR&gt;</cite>, you would typically invoke your compiler for the source files
 using the <cite>libscalapackfx_module</cite> as:</p>
-<div class="highlight-python"><div class="highlight"><pre>F2003_COMPILER -I&lt;MODFILEDIR&gt; -c somesource.f90
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">F2003_COMPILER</span> <span class="o">-</span><span class="n">I</span><span class="o">&lt;</span><span class="n">MODFILEDIR</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">c</span> <span class="n">somesource</span><span class="o">.</span><span class="n">f90</span>
 </pre></div>
 </div>
 <p>and link your object files at the end with:</p>
-<div class="highlight-python"><div class="highlight"><pre>LINKER -I&lt;LIBRARYDIR&gt; somesource.o ... -L&lt;LIBRARYDIR&gt; -lscalapackfx
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LINKER</span> <span class="o">-</span><span class="n">I</span><span class="o">&lt;</span><span class="n">LIBRARYDIR</span><span class="o">&gt;</span> <span class="n">somesource</span><span class="o">.</span><span class="n">o</span> <span class="o">...</span> <span class="o">-</span><span class="n">L</span><span class="o">&lt;</span><span class="n">LIBRARYDIR</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">lscalapackfx</span>
 </pre></div>
 </div>
 </div>
@@ -116,13 +114,13 @@ project.</p>
 </li>
 <li><p class="first">During the make process of your project, invoke the library makefile
 (<cite>Makefile.lib</cite>) to build the module files and the library in the folder
-where you&#8217;ve put the library sources.</p>
+where you’ve put the library sources.</p>
 <p>You must pass the compiler and linker options via variable defintions at the
 make command line. Assuming that the variables <cite>$(FXX)</cite>, <cite>$(FXXOPT)</cite>, <cite>$(LN)</cite>
 and <cite>$(LNOPT)</cite>, <cite>$(M4)</cite> and <cite>$(M4OPT)</cite> contain the Fortran compiler, the
 Fortran compiler options, the linker, the linker options, the M4 preprocessor
 and its options, respectively, you would have something like:</p>
-<div class="highlight-python"><div class="highlight"><pre>$(SCALAPACKFX_SRCDIR)/libscalapackfx.a:
+<div class="highlight-default"><div class="highlight"><pre><span></span>$(SCALAPACKFX_SRCDIR)/libscalapackfx.a:
         $(MAKE) -C $(SCALAPACKFX_SRCDIR) \
             FXX=&quot;$(FXX)&quot; FXXOPT=&quot;$(FXXOPT)&quot; \
             LN=&quot;$(LN)&quot; LNOPT=&quot;$(LNOPT)&quot; \
@@ -131,7 +129,7 @@ and its options, respectively, you would have something like:</p>
 </pre></div>
 </div>
 <p>in the makefile of your project with <cite>$(SCALAPACKFX_SRCDIR)</cite> being the
-directory where you&#8217;ve put the source of SCALAPACKFX.</p>
+directory where you’ve put the source of SCALAPACKFX.</p>
 </li>
 </ol>
 <p>You should also have a look at the <cite>GNUmakefile</cite> in the <cite>test/</cite> folder of
@@ -162,11 +160,11 @@ Intel Fortran 12.1 seem to work.</td></tr>
         <li class="right" >
           <a href="about.html" title="About SCALAPACKFX"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">SCALAPACKFX</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">SCALAPACKFX</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
     </div>
   </body>
 </html>

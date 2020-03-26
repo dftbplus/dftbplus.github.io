@@ -1,34 +1,32 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>About SCALAPACKFX &mdash; SCALAPACKFX</title>
-    
+    <title>About SCALAPACKFX &#8212; SCALAPACKFX</title>
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
         VERSION:     '12.12',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="author" title="About these documents" href="#" />
-    <link rel="top" title="SCALAPACKFX" href="index.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Compiling and installing SCALAPACKFX" href="installing.html" />
     <link rel="prev" title="Welcome to SCALAPACKFX’s documentation!" href="index.html" /> 
   </head>
-  <body role="document">
+  <body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -38,20 +36,20 @@
         <li class="right" >
           <a href="index.html" title="Welcome to SCALAPACKFX’s documentation!"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">SCALAPACKFX</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">SCALAPACKFX</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="index.html"
-                        title="previous chapter">Welcome to SCALAPACKFX&#8217;s documentation!</a></p>
+                        title="previous chapter">Welcome to SCALAPACKFX’s documentation!</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="installing.html"
                         title="next chapter">Compiling and installing SCALAPACKFX</a></p>
 <h3><a href="index.html">Table Of Contents</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">About SCALAPACKFX</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">About SCALAPACKFX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installing.html">Compiling and installing SCALAPACKFX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using.html">Using SCALAPACKFX</a></li>
 <li class="toctree-l1"><a class="reference internal" href="routines.html">List of routines</a></li>
@@ -75,7 +73,7 @@ in Fortran.</p>
 <p>Consider for example a simple broadcast in BLACS. In order to broadcast an
 integer array (aa) with 5x5 elements using the appropriate BLACS routine, you
 have to issue:</p>
-<div class="highlight-python"><div class="highlight"><pre>call igebs2d(ictxt, &quot;All&quot;, &quot; &quot;, 5, 5, aa, 5)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">call</span> <span class="n">igebs2d</span><span class="p">(</span><span class="n">ictxt</span><span class="p">,</span> <span class="s2">&quot;All&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">aa</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Additional to the object to be broadcasted and the communicator, you also
@@ -85,23 +83,23 @@ have to issue:</p>
 <em>known</em> at compile-time)</li>
 <li>number of row, number of columns and leading dimension of the array (although
 those are <em>known</em> at run-time)</li>
-<li>scope of the broadcast (could be optional as very often it is &#8220;All&#8221; any way)</li>
+<li>scope of the broadcast (could be optional as very often it is “All” any way)</li>
 <li>communcation pattern for the broadcast (could be optional as very often
-&#8221; &#8221; is used)</li>
+” ” is used)</li>
 </ul>
 <p>Using SCALAPACKFX the call above is as simple as:</p>
-<div class="highlight-python"><div class="highlight"><pre>call blacsfx_gebs(mygrid, aa)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">call</span> <span class="n">blacsfx_gebs</span><span class="p">(</span><span class="n">mygrid</span><span class="p">,</span> <span class="n">aa</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>No redundant arguments, sensible defaults. Nevertheless the full functionality
 still available via optional parameters if needed. E.g. if you wanted to the
 scope, you could write:</p>
-<div class="highlight-python"><div class="highlight"><pre>call blacsfx_gebs(mygrid, aa, scope=&quot;Row&quot;)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">call</span> <span class="n">blacsfx_gebs</span><span class="p">(</span><span class="n">mygrid</span><span class="p">,</span> <span class="n">aa</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;Row&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Also, the array aa does not have to be a rank two array, it can be also rank one
 (vector) or rank zero (scalar).</p>
-<p>A few routines are already covered (see <a class="reference internal" href="routines.html#sec-routines"><span>List of routines</span></a>). If your desired
+<p>A few routines are already covered (see <a class="reference internal" href="routines.html#sec-routines"><span class="std std-ref">List of routines</span></a>). If your desired
 routine is not among them yet, you are cordially invited to extend SCALAPACKFX
 and to share it in order to let others profit from your work (SCALAPACKFX is
 licensed under the simplified BSD license). For more details see the <a class="reference external" href="https://github.com/dftbplus/scalapackfx">project
@@ -123,11 +121,11 @@ home page</a>.</p>
         <li class="right" >
           <a href="index.html" title="Welcome to SCALAPACKFX’s documentation!"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">SCALAPACKFX</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">SCALAPACKFX</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
     </div>
   </body>
 </html>

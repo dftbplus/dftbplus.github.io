@@ -204,7 +204,7 @@ Private Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Broadcasts an MPI message to all nodes. </p>
-<p>All functions have the same argument list only differing in the type and rank of the second argument. The second argument can be of type integer (i), real (s), double precision (d), complex (c), double complex (z), logical (l) and character (h). Its rank can vary from zero (scalar) up to the maximum rank.</p>
+<p>All functions have the same argument list only differing in the type and rank of the second argument. The second argument can be of type integer, real, double precision, complex, double complex, logical and character. Its rank can vary from zero (scalar) up to the maximum rank.</p>
 <dl class="section see"><dt>See also</dt><dd>MPI documentation (<code>MPI_BCAST</code>)</dd></dl>
 <p>Example: </p><pre class="fragment">program test_bcast
   use libmpifx_module
@@ -270,10 +270,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type c0). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -329,10 +329,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type c1). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -388,10 +388,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type c2). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -447,10 +447,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type c3). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -506,10 +506,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type c4). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -565,10 +565,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type c5). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -624,10 +624,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type c6). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -683,10 +683,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type d0). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -742,10 +742,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type d1). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -801,10 +801,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type d2). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -860,10 +860,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type d3). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -919,10 +919,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type d4). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -978,10 +978,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type d5). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1037,10 +1037,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type d6). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1065,7 +1065,7 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">character(*)&#160;</td>
+          <td class="paramtype">character(len=*)&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -1096,10 +1096,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type h0). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1124,7 +1124,7 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">character(*), dimension(:)&#160;</td>
+          <td class="paramtype">character(len=*), dimension(:)&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -1155,10 +1155,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type h1). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1183,7 +1183,7 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">character(*), dimension(:,:)&#160;</td>
+          <td class="paramtype">character(len=*), dimension(:,:)&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -1214,10 +1214,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type h2). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1242,7 +1242,7 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">character(*), dimension(:,:,:)&#160;</td>
+          <td class="paramtype">character(len=*), dimension(:,:,:)&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -1273,10 +1273,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type h3). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1301,7 +1301,7 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">character(*), dimension(:,:,:,:)&#160;</td>
+          <td class="paramtype">character(len=*), dimension(:,:,:,:)&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -1332,10 +1332,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type h4). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1360,7 +1360,7 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">character(*), dimension(:,:,:,:,:)&#160;</td>
+          <td class="paramtype">character(len=*), dimension(:,:,:,:,:)&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -1391,10 +1391,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type h5). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1419,7 +1419,7 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">character(*), dimension(:,:,:,:,:,:)&#160;</td>
+          <td class="paramtype">character(len=*), dimension(:,:,:,:,:,:)&#160;</td>
           <td class="paramname"><em>msg</em>, </td>
         </tr>
         <tr>
@@ -1450,10 +1450,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type h6). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1509,10 +1509,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type i0). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1568,10 +1568,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type i1). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1627,10 +1627,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type i2). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1686,10 +1686,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type i3). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1745,10 +1745,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type i4). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1804,10 +1804,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type i5). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1863,10 +1863,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type i6). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1922,10 +1922,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type l0). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1981,10 +1981,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type l1). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2040,10 +2040,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type l2). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2099,10 +2099,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type l3). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2158,10 +2158,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type l4). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2217,10 +2217,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type l5). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2276,10 +2276,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type l6). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2335,10 +2335,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type s0). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2394,10 +2394,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type s1). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2453,10 +2453,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type s2). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2512,10 +2512,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type s3). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2571,10 +2571,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type s4). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2630,10 +2630,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type s5). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2689,10 +2689,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type s6). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2748,10 +2748,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type z0). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2807,10 +2807,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type z1). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2866,10 +2866,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type z2). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2925,10 +2925,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type z3). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2984,10 +2984,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type z4). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3043,10 +3043,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type z5). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3102,10 +3102,10 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 <p>Broadcasts an MPI message to all nodes (type z6). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mycomm</td><td>MPI descriptor </td></tr>
-    <tr><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes. </td></tr>
-    <tr><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank). </td></tr>
-    <tr><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mycomm</td><td>MPI descriptor</td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">msg</td><td>Msg to be broadcasted on root and received on non-root nodes.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">root</td><td>Root node for the broadcast (default: mycommmasterrank).</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">error</td><td>Optional error handling flag. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3113,7 +3113,7 @@ end program test_bcast</pre> </div><h2 class="groupheader">Member Function/Subro
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>mpifx_bcast.F90</li>
+<li>mpifx_bcast.fpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
