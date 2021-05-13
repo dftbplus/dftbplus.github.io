@@ -1,7 +1,9 @@
 .. _sec_about:
 
+
+*****
 About
-=====
+*****
 
 .. toctree::
   :hidden:
@@ -18,7 +20,7 @@ implementations so far.
 
 
 Features
---------
+========
 
 DFTB+ offers an approximate density functional theory based quantum simulation
 tool with functionalities similar to ab initio quantum mechanical packages while
@@ -31,15 +33,16 @@ transport under non-equilibrium conditions.
 
 
 Development
------------
+===========
 
 DFTB+ is free software developed by several contributors around the world. In
 case you are interested in the actual development or you would like to
 :ref:`contribute <sec_contribute>`, check out our `public repository
 <http://github.com/dftbplus>`_.
 
+
 Citation
---------
+========
 
 If you publish results obtained with the DFTB+ code, we ask you to cite
 following works:

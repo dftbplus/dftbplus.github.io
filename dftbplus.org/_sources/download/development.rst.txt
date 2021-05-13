@@ -1,7 +1,8 @@
 .. _sec_download_development:
 
+
 Development version
--------------------
+===================
 
 Contains the `latest DFTB+ features, improvements and fixes
 <https://github.com/dftbplus/dftbplus/blob/master/CHANGELOG.rst>`_, which have

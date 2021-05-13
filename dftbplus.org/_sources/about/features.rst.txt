@@ -1,7 +1,8 @@
 .. _sec_about_features:
 
+
 Features
---------
+========
 
 The latest stable release has among others, the following capabilities:
 

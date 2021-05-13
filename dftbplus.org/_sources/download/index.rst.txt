@@ -1,5 +1,6 @@
+********
 Download
-========
+********
 
 .. toctree::
   :hidden:

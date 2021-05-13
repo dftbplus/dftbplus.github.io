@@ -1,8 +1,9 @@
+*************
 Documentation
-=============
+*************
 
 Recipes
--------
+=======
 
 Have a look at the recipes, if you are new to DFTB+ (it contains tutorials /
 introduction to several topics), or if you look for an overview about a specific
@@ -12,7 +13,7 @@ topic or for some useful tricks.
 
 
 User manual
------------
+===========
 
 Consult this for the detailed description of all possible features, keywords and
 options.

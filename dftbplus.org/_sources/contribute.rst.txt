@@ -1,7 +1,8 @@
 .. _sec_contribute:
 
+**********
 Contribute
-==========
+**********
 
 
 DFTB+ is an open source program and you are very welcome to join us in

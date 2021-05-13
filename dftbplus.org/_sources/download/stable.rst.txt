@@ -1,7 +1,8 @@
 .. _sec_download_stable:
 
+
 Release 21.1
-------------
+============
 
 |lgpl badge|
 
@@ -19,7 +20,7 @@ Release 21.1
 
 
 Building DFTB+ from source
-..........................
+--------------------------
 
 See the `README.rst
 <https://github.com/dftbplus/dftbplus/blob/21.1/README.rst>`_ and the
@@ -28,7 +29,7 @@ files for build instructions.
 
 
 Most relevant changes since last release
-........................................
+----------------------------------------
 
 See the `CHANGELOG.rst
 <https://github.com/dftbplus/dftbplus/blob/21.1/CHANGELOG.rst>`_ file for the

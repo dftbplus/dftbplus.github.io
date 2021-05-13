@@ -1,5 +1,5 @@
 Deprecated versions
--------------------
+===================
 
 Older releases can be download from the `GitHub repository
 <https://github.com/dftbplus/dftbplus/releases/>`_.
