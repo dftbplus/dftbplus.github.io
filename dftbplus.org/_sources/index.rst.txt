@@ -1,0 +1,65 @@
+.. DFTB+ website documentation master file, created by
+   sphinx-quickstart on Wed May 12 18:22:07 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+
+Welcome to DFTB+
+================
+
+|release badge|
+
+.. toctree::
+  :hidden:
+  :maxdepth: 0
+
+  about/index.rst
+  download/index.rst
+  documentation.rst
+  contact.rst
+  contribute.rst
+
+
+DFTB+ is a **fast and efficient** versatile quantum
+mechanical simulation software package. Using DFTB+ you can carry out quantum
+mechanical simulations similar to density functional theory but in an
+approximate way, typically gaining around two orders of magnitude in speed. (See
+:ref:`About DFTB+ <sec_about>` for further details.)
+
+You can use DFTB+ either as a **standalone application** or embed it into your
+own academic or commercial simulation package as a **library**.
+
+DFTB+ is **free software** licensed under the *GNU Lesser General Public
+License*.
+
+
+.. raw:: html
+
+  <div class="newsbar">
+    <span class="newsheader">DFTB+ 21.1 released</span>
+    <span class="newsdate">[2020-05-12]</span>
+  </div>
+
+We are proud to announce the next stable release: :ref:`DFTB+ 21.1
+<sec_download_stable>`. This release contains several new features. These
+include
+
+* Conductor like screening model (COSMO) implicit solvation model for SCC
+  calculations, printout of cavity information as a cosmo file
+
+* Extended syntax for selecting atoms in HSD input
+
+* Static coupled perturbed response for homogeneous electric fields (evaluating
+  molecular electric polarisability)
+
+* Self consistent DFT-D4 dispersion within the SCC procedure
+
+* Self-consistent DFT-D4 with REKS
+
+* Analytic forces for TS-dispersion (via libMBD 0.12.1)
+
+
+
+.. |release badge| image:: _static/images/release.svg
+    :alt: DFTB+ stable release
+    :target: download/stable.html

@@ -1,0 +1,21 @@
+Download
+========
+
+.. toctree::
+  :hidden:
+  :maxdepth: 2
+
+  stable.rst
+  development.rst
+  deprecated.rst
+
+DFTB+ versions available for download:
+
+* :ref:`DFTB+ Stable <sec_download_stable>` (latest stable version, release
+  21.1)
+* :ref:`DFTB+ Development version <sec_download_development>` (for experienced
+  users only!)
+
+Note: The DFTB+ code needs parameterisation data (Slater-Koster files) in order
+to perform calculations. These parameters are not distributed with the code. You
+can download the Slater-Koster files from `DFTB.ORG <https://dftb.org>`_.

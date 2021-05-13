@@ -1,0 +1,46 @@
+Contact
+========
+
+
+Mailing lists
+-------------
+
+There are two public mailing lists related to DFTB+:
+
+* `DFTB+ user list
+  <https://mailman.zfn.uni-bremen.de/cgi-bin/mailman/listinfo/dftb-plus-user>`_
+
+  Join this list if you have questions about handling the code, or if you want
+  to exchange information with other DFTB+ users or developers and to share your
+  experience with DFTB+ with them.
+
+* `DFTB+ announce list
+  <https://mailman.zfn.uni-bremen.de/cgi-bin/mailman/listinfo/dftb-plus-announce>`_
+
+  Subscribe to this (read-only) list if you would like to be notified about new
+  releases of DFTB+.
+
+
+Issue tracker
+-------------
+
+If you think to have found an issue with the code (e.g. a bug) or have a feature
+request, please use our `issue tracker
+<https://github.com/dftbplus/dftbplus/issues>`_ to report it.
+
+Questions about handling the code should be posted to the DFTB+ User mailing
+list! (see above)
+
+
+
+
+Support
+-------
+
+DFTB+ comes on an as-is basis without official support. However, we have an
+`active user community
+<https://mailman.zfn.uni-bremen.de/cgi-bin/mailman/listinfo/dftb-plus-user>`_,
+so that problems can be discussed and are usually resolved in very short time.
+
+If you plan to **integrate DFTB+** into your software package, please contact us
+directly, so that we can eventually provide specific support to your efforts.
