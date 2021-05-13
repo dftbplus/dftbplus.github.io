@@ -87,6 +87,7 @@ div#navbar-start {
 
 main.py-md-5 {
     padding-top: 2rem !important;
+    max-width: 60em;
 }
 
 .toctree-l1.nav-item {
