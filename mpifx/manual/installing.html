@@ -1,32 +1,21 @@
+<!DOCTYPE html>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="./">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Compiling and installing MPIFX &#8212; MPIFX</title>
-    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '12.12',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css?v=1b560073" />
+    <script src="_static/documentation_options.js?v=9172181d"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Using MPIFX" href="using.html" />
     <link rel="prev" title="About MPIFX" href="about.html" /> 
-  </head>
-  <body>
+  </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -36,18 +25,23 @@
         <li class="right" >
           <a href="about.html" title="About MPIFX"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">MPIFX</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">MPIFX</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Compiling and installing MPIFX</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="about.html"
-                        title="previous chapter">About MPIFX</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="using.html"
-                        title="next chapter">Using MPIFX</a></p>
-<h3><a href="index.html">Table Of Contents</a></h3>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="about.html"
+                          title="previous chapter">About MPIFX</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="using.html"
+                          title="next chapter">Using MPIFX</a></p>
+  </div>
+<h3><a href="index.html">Table of Contents</a></h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About MPIFX</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Compiling and installing MPIFX</a></li>
@@ -64,30 +58,30 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="compiling-and-installing-mpifx">
-<h1>Compiling and installing MPIFX<a class="headerlink" href="#compiling-and-installing-mpifx" title="Permalink to this headline">¶</a></h1>
+  <section id="compiling-and-installing-mpifx">
+<h1>Compiling and installing MPIFX<a class="headerlink" href="#compiling-and-installing-mpifx" title="Link to this heading">¶</a></h1>
 <p>In order to compile MPIFX, you need following prerequisites:</p>
 <ul class="simple">
-<li>Fortran 2003 compiler,</li>
-<li>Python (2.6, 2.7 or any 3.x release)</li>
-<li>GNU Make.</li>
+<li><p>Fortran 2003 compiler,</p></li>
+<li><p>Python (2.6, 2.7 or any 3.x release)</p></li>
+<li><p>GNU Make.</p></li>
 </ul>
 <p>There are basically two different ways of using the library in your project:</p>
 <ul class="simple">
-<li><a class="reference internal" href="#precompiling-the-library">Precompiling the library</a> and linking it later to your project.</li>
-<li><a class="reference internal" href="#compiling-the-library-during-your-build-process">Compiling the library during your build process</a>.</li>
+<li><p><a class="reference internal" href="#precompiling-the-library">Precompiling the library</a> and linking it later to your project.</p></li>
+<li><p><a class="reference internal" href="#compiling-the-library-during-your-build-process">Compiling the library during your build process</a>.</p></li>
 </ul>
 <p>Both are described below.</p>
-<div class="section" id="precompiling-the-library">
-<h2>Precompiling the library<a class="headerlink" href="#precompiling-the-library" title="Permalink to this headline">¶</a></h2>
+<section id="precompiling-the-library">
+<h2>Precompiling the library<a class="headerlink" href="#precompiling-the-library" title="Link to this heading">¶</a></h2>
 <p>In order to create a precompiled library</p>
 <ol class="arabic simple">
-<li>Copy the file <cite>make.arch.template</cite> to <cite>make.arch</cite> in the root directory of
+<li><p>Copy the file <cite>make.arch.template</cite> to <cite>make.arch</cite> in the root directory of
 the source and customize the settings for the compilers and the linker
-according to your system.</li>
-<li>Issue <cite>make</cite> to build the library.</li>
-<li>Issue <cite>make install</cite> to copy the library and the module files to the
-installation destination.</li>
+according to your system.</p></li>
+<li><p>Issue <cite>make</cite> to build the library.</p></li>
+<li><p>Issue <cite>make install</cite> to copy the library and the module files to the
+installation destination.</p></li>
 </ol>
 <p>During the build process of your project, you may link the library with the
 <cite>-lmpifx</cite> option.  Eventually, you may need to specify options for your compiler
@@ -95,22 +89,21 @@ and your linker to specify the location of those directories. Assuming you’ve
 put the module files in the directory <cite>&lt;MODFILEDIR&gt;</cite> and the library file in
 <cite>&lt;LIBRARYDIR&gt;</cite>, you would typically invoke your compiler for the source files
 using the <cite>libmpifx_module</cite> as:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">F2003_COMPILER</span> <span class="o">-</span><span class="n">I</span><span class="o">&lt;</span><span class="n">MODFILEDIR</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">c</span> <span class="n">somesource</span><span class="o">.</span><span class="n">f90</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">F2003_COMPILER</span> <span class="o">-</span><span class="n">I</span><span class="o">&lt;</span><span class="n">MODFILEDIR</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">c</span> <span class="n">somesource</span><span class="o">.</span><span class="n">f90</span>
 </pre></div>
 </div>
 <p>and link your object files at the end with:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">LINKER</span> <span class="o">-</span><span class="n">I</span><span class="o">&lt;</span><span class="n">LIBRARYDIR</span><span class="o">&gt;</span> <span class="n">somesource</span><span class="o">.</span><span class="n">o</span> <span class="o">...</span> <span class="o">-</span><span class="n">L</span><span class="o">&lt;</span><span class="n">LIBRARYDIR</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">lmpifx</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LINKER</span> <span class="o">-</span><span class="n">I</span><span class="o">&lt;</span><span class="n">LIBRARYDIR</span><span class="o">&gt;</span> <span class="n">somesource</span><span class="o">.</span><span class="n">o</span> <span class="o">...</span> <span class="o">-</span><span class="n">L</span><span class="o">&lt;</span><span class="n">LIBRARYDIR</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">lmpifx</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="compiling-the-library-during-your-build-process">
-<h2>Compiling the library during your build process<a class="headerlink" href="#compiling-the-library-during-your-build-process" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="compiling-the-library-during-your-build-process">
+<h2>Compiling the library during your build process<a class="headerlink" href="#compiling-the-library-during-your-build-process" title="Link to this heading">¶</a></h2>
 <p>In order to build the library during the build process of your project:</p>
 <ol class="arabic">
-<li><p class="first">Copy the content of the <cite>lib/</cite> folder into a <em>separate</em> folder within your
-project.</p>
-</li>
-<li><p class="first">During the make process of your project, invoke the library makefile
+<li><p>Copy the content of the <cite>lib/</cite> folder into a <em>separate</em> folder within your
+project.</p></li>
+<li><p>During the make process of your project, invoke the library makefile
 (<cite>make.build</cite>) to build the module files and the library in the folder
 where you’ve put the library sources.</p>
 <p>You must pass the compiler and linker options via variable defintions at the
@@ -118,7 +111,7 @@ make command line. Assuming that the variables <cite>$(FXX)</cite>, <cite>$(FXXO
 and <cite>$(LNOPT)</cite>, <cite>$(FYPP)</cite> and <cite>$(FYPPOPT)</cite> contain the Fortran compiler, the
 Fortran compiler options, the linker, the linker options, the Fypp
 preprocessor and its options, respectively, you would have something like:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>libmpifx.a:
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>libmpifx.a:
         $(MAKE) -C $(MPIFX_BUILDDIR) \
             FXX=&quot;$(FXX)&quot; FXXOPT=&quot;$(FXXOPT)&quot; \
             LN=&quot;$(LN)&quot; LNOPT=&quot;$(LNOPT)&quot; \
@@ -133,10 +126,11 @@ of the library should be done.</p>
 </ol>
 <p>You should also have a look at the <cite>Umakefile</cite> in the root folder of MPIFX,
 which uses exactly the same technique to compile the library.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -151,11 +145,12 @@ which uses exactly the same technique to compile the library.</p>
         <li class="right" >
           <a href="about.html" title="About MPIFX"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">MPIFX</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">MPIFX</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Compiling and installing MPIFX</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.7.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>
