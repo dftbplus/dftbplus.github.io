@@ -44,7 +44,8 @@ var menudata={children:[
 {text:"m",url:"functions_m.html#index_m"},
 {text:"r",url:"functions_r.html#index_r"},
 {text:"s",url:"functions_s.html#index_s"},
-{text:"u",url:"functions_u.html#index_u"}]},
+{text:"u",url:"functions_u.html#index_u"},
+{text:"w",url:"functions_w.html#index_w"}]},
 {text:"Functions/Subroutines",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"f",url:"functions_func_f.html#index_f"},
